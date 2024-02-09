@@ -1,13 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Employee</title>
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <h1>Hello world!!</h1>
-    <script src="./script.js"></script>
-</body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div><button onclick="toggleForm()">ADD Employee</button></div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>role</th>
+          <th>salary</th>
+          <th>PhoneNumber</th>
+          <th>Email</th>
+          <th>company</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <div id="form-body" style="display: none">
+      <span onclick="toggleForm()">&#x2715;</span>
+     
+      <form>
+        <h1 style="font-size: 30px; font-weight: bolder; color:darkgreen">Enter the Details</h1>
+        <!-- <input type="text" name="Sno" placeholder="Enter the Sno"> -->
+        <input type="text" name="ename" placeholder="Enter the ename" required/>
+        <select name="role" required>
+          <option value="SDE">SDE</option>
+          <option value="SD">SD</option>
+          <option value="QA">QA</option>
+          <option value="PrjMng">Project Manager</option>
+          <option value="Product">Product Manager</option>
+        </select>
+        <input type="number" name="esalary" placeholder="Enter the esalary" required/>
+        <input type="number" name="ePhone" placeholder="Enter the ePhone" required/>
+        <input type="email" name="Eemail" placeholder="Enter the Email" required/>
+        <input type="text" name="ecompany" placeholder="Enter the Company" required/>
+        <button>ADD</button>
+      </form>
+    </div>
+    <!-- <script src="./script.js"></script> -->
+    <script src="./script1.js"></script>
+  </body>
 </html>
